@@ -139,7 +139,7 @@ body {
   transform: rotate(25deg);
 }
 
-+.bento-grid {
+.bento-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
@@ -163,7 +163,7 @@ body {
   transform: translateY(-4px);
 }
 
-+.hero-panel {
+.hero-panel {
   display: flex;
   grid-column: span 3;
   min-height: 23rem;
@@ -235,7 +235,7 @@ blockquote em {
   transform: translate(3px, -3px);
 }
 
-+.hero-orbit {
+.hero-orbit {
   position: absolute;
   right: 5%;
   top: 12%;
@@ -305,7 +305,7 @@ blockquote em {
   transform: rotate(-7deg);
 }
 
-+.panel-heading {
+.panel-heading {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -374,7 +374,7 @@ blockquote em {
   animation: grow .9s ease both;
 }
 
-+.clock-panel {
+.clock-panel {
   min-height: 12.5rem;
   background: rgba(144, 215, 237, .58);
 }
@@ -386,14 +386,14 @@ blockquote em {
   text-transform: uppercase;
 }
 
-.clock-panel time {
+.clock-panel .favorite-food {
   display: block;
   margin-top: 2.2rem;
-  font: 700 clamp(1.8rem, 4vw, 2.55rem) monospace;
-  letter-spacing: -.08em;
+  font: 700 clamp(1.3rem, 3vw, 2.1rem) "Trebuchet MS", "Segoe UI", sans-serif;
+  letter-spacing: 0;
 }
 
-.clock-panel p:not(.eyebrow) {
+.clock-panel p:not(.eyebrow):not(.favorite-food) {
   margin: .35rem 0 1rem;
   color: #518798;
   font-size: .75rem;
@@ -412,7 +412,7 @@ blockquote em {
   animation: clock-line 4s linear infinite;
 }
 
-+.projects-panel {
+.projects-panel {
   grid-column: span 2;
   min-height: 21rem;
 }
@@ -442,12 +442,13 @@ blockquote em {
 
 .project-list {
   display: grid;
+  margin-top: 1rem;
   gap: .65rem;
 }
 
 .project-item {
   display: grid;
-  grid-template-columns: 2.3rem 1fr auto;
+  grid-template-columns: 2.3rem 1fr;
   align-items: center;
   gap: .75rem;
   padding: .55rem;
@@ -458,7 +459,6 @@ blockquote em {
 }
 
 .project-item:hover {
-  padding-inline: .8rem;
   background: rgba(255, 255, 255, .45);
 }
 
@@ -506,7 +506,7 @@ blockquote em {
   font-size: 1.2rem;
 }
 
-+.quote-panel {
+.quote-panel {
   grid-column: span 2;
   min-height: 21rem;
   background: #ffb19a;
@@ -592,7 +592,7 @@ blockquote em {
   font-size: 1rem;
 }
 
-+body.light-mode {
+body.light-mode {
   --ink: #f1f7ed;
   --muted: #a9bbb1;
   --paper: #17282c;
@@ -647,7 +647,7 @@ blockquote em {
   color: var(--ink);
 }
 
-+.reveal {
+.reveal {
   animation: reveal .75s cubic-bezier(.2, .8, .2, 1) both;
 }
 
@@ -705,7 +705,7 @@ blockquote em {
   }
 }
 
-+@media (max-width: 760px) {
+@media (max-width: 760px) {
   body {
     padding-top: 1.25rem;
   }
@@ -750,7 +750,7 @@ blockquote em {
   }
 }
 
-+@media (max-width: 500px) {
+@media (max-width: 500px) {
   body {
     padding-inline: .75rem;
   }
@@ -785,7 +785,7 @@ blockquote em {
     font-size: 2rem;
   }
 
-  .clock-panel time {
+  .clock-panel .favorite-food {
     font-size: 1.45rem;
   }
 
